@@ -35,7 +35,3 @@ class ConsoleBitly:
 		except:
 			print "Invalid bitly shortened URl"
 	
-c=ConsoleBitly()
-req=raw_input("Enter the URL to be shortened: ")
-c.info(req)
-
