@@ -11,9 +11,15 @@ class ConsoleBitly:
 		response=urllib2.urlopen(url)
 		a = json.loads(response.read())
 		print "\nShortened URL is: \033[1;36m"+a['data']['url']+"\033[1;m\n"
-
+		
+	def expand(self,req):
+		url="http://api.bitly.com/v3/expand?login="+s.bitly_username+"&apiKey="+s.bitly_apikey+"&shortUrl="+req
+		print "Please wait... \n"
+		response=urllib2.urlopen(url)
+		a = json.loads(response.read())
+		print "\nExpanded URL is: \033[1;36m"+a['data']['expand'][0]['long_url']+"\033[1;m\n"
 
 c=ConsoleBitly()
 req=raw_input("Enter the URL to be shortened: ")
-c.shorten(req)
+c.expand(req)
 
