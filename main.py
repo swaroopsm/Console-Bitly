@@ -6,11 +6,14 @@ import settings as s
 
 class ConsoleBitly:
 	def shorten(self,req):
-		url="http://api.bitly.com/v3/shorten?login="+s.bitly_username+"&apiKey="+s.bitly_apikey+"&longUrl="+req
-		print "Please wait... \n"
-		response=urllib2.urlopen(url)
-		a = json.loads(response.read())
-		print "\nShortened URL is: \033[1;36m"+a['data']['url']+"\033[1;m\n"
+		try:
+			url="http://api.bitly.com/v3/shorten?login="+s.bitly_username+"&apiKey="+s.bitly_apikey+"&longUrl="+req
+			print "Please wait... \n"
+			response=urllib2.urlopen(url)
+			a = json.loads(response.read())
+			print "\nShortened URL is: \033[1;36m"+a['data']['url']+"\033[1;m\n"
+		except:
+			print "\033[1;31mThe provided url may be invalid. Prefix URL with http OR https...\033[1;m\n"
 		
 	def expand(self,req):
 		try:
@@ -24,5 +27,5 @@ class ConsoleBitly:
 
 c=ConsoleBitly()
 req=raw_input("Enter the URL to be shortened: ")
-c.expand(req)
+c.shorten(req)
 
