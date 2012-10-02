@@ -1,2 +1,2 @@
-## Tiny-Bitly
-		A console appplication for shortening URL's using bitly' API
+## Console-Bitly
+		A thin wrapper for the bit.ly API.
