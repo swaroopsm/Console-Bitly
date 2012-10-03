@@ -34,7 +34,11 @@ class ConsoleBitly:
 			print "Please wait... \n"
 			response=urllib2.urlopen(url)
 			a = json.loads(response.read())
-			print "\nExpanded URL is: \033[1;36m"+a['data']['info'][0]['title']+"\033[1;m\n"
+			title=str(a['data']['info'][0]['title'])
+			if title=='None':
+				print "\nExpanded URL is: \033[1;36m There exists 'NO TITLE' for this URL.\033[1;m\n"
+			else:
+				print "\nExpanded URL is: \033[1;36m"+title+"\033[1;m\n"
 		except:
-			print "Invalid bitly shortened URl"
+			print "Invalid bitly shortened URL"
 	
