@@ -2,9 +2,6 @@
 		A thin wrapper for the bit.ly API.
 		
 ### Methods
-		Firstly, create an object
-		api=ConsoleBitly()
-		
 		URL Shorten:
 		api.shorten("YOUR_LONG_URL")
 		
