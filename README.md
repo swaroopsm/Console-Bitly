@@ -3,10 +3,10 @@
 		
 ### Methods
 		URL Shorten:
-		api.shorten("YOUR_LONG_URL")
+		ConsoleBitly.shorten("YOUR_LONG_URL")
 		
 		URL Expand:
-		api.expand("YOUR_SHORT_BITLY_URL")
+		ConsoleBitly.expand("YOUR_SHORT_BITLY_URL")
 		
 		URL Information:
-		api.info("YOUR_SHORT_BITLY_URL")
+		ConsoleBitly.info("YOUR_SHORT_BITLY_URL")
