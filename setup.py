@@ -10,6 +10,7 @@ setup(
     author="Swaroop SM",
     author_email="swaroop.striker@gmail.com",
     description="A thin wrapper around the bit.ly API",
+    long_description=open('README.txt').read(),
     packages=['ConsoleBitly']
     
 )
