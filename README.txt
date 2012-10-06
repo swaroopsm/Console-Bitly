@@ -13,17 +13,17 @@ Usage:
 	#### API METHODS ####
 		
 	#### URL Shorten ####
-		if bitly.shorten("http://google.com"):
-			bitly['value']
+		s = bitly.shorten("http://google.com")
+		if s['success']: print s['value']
 		
-	#### URL Expand ####
-		if bitly.expand("http://bit.ly/VaYjPq"):
-			bitly['value']
+		#### URL Expand ####
+		e = bitly.expand("http://bit.ly/VaYjPq")
+		if e['success']: print e['value']
 		
-	#### URL Information ####
-		if bitly.info("http://bit.ly/VaYjPq"):
-			bitly['value']
+		#### URL Information ####
+		i = bitly.info("http://bit.ly/VaYjPq")
+		if i['success']: print i['value']
 		
-	#### Lookup for a URL ####
-		if bitly.info("http://google.com"):
-			bitly['value']
+		#### Lookup for a URL ####
+		l = bitly.info("http://google.com")
+		if l['success']: print l['value']
