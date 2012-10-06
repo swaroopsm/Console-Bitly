@@ -24,9 +24,10 @@ class ConsoleBitly:
 			print "Please wait... \n"
 			response=urllib2.urlopen(url)
 			a = json.loads(response.read())
-			print "\nExpanded URL is: \033[1;36m"+a['data']['expand'][0]['long_url']+"\033[1;m\n"
+			long_url=a['data']['expand'][0]['long_url']
+			return {"success": True, "value": long_url}
 		except:
-			print "\033[1;31mThe provided url might not be of a bit.ly domain OR shortened version does not exist!\033[1;m\n"
+			return {"success": False}
 	
 	def info(self,req):
 		try:
