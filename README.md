@@ -20,3 +20,6 @@
 		
 		#### URL Information ####
 		bitly.info("http://bit.ly/VaYjPq")
+		
+		#### Lookup for a URL ####
+		bitly.info("http://google.com")
