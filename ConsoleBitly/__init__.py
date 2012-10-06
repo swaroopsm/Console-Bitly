@@ -41,4 +41,15 @@ class ConsoleBitly:
 				print "\nExpanded URL is: \033[1;36m"+title+"\033[1;m\n"
 		except:
 			print "Invalid bitly shortened URL"
+			
+	def lookup(self,req):
+		url="http://api.bitly.com/v3/lookup?login="+self.bitly_username+"&apiKey="+self.bitly_apikey+"&url="+req
+		print "Please wait... \n"
+		response=urllib2.urlopen(url)
+		a = json.loads(response.read())
+		try:
+			url=str(a['data']['lookup'][0]['short_url'])
+			print "\nLookup URL is: \033[1;36m"+url+"\033[1;m\n"
+		except:
+			print "\n\033[1;31m Either the lookup does not exist or you forgot to add a trailing slash at the end of the URL\033[1;m\n"
 	
