@@ -1,5 +1,5 @@
 ## Console-Bitly
-		A thin wrapper for the [bit.ly](http://bit.ly/) API.
+A thin wrapper for the [bit.ly](http://bit.ly/) API.
 		
 ### Quick Install
 		sudo pip install git+git://github.com/swaroopsm/Console-Bitly.git
