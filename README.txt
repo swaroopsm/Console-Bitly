@@ -1,12 +1,22 @@
-## Console-Bitly ##
-		A thin wrapper for the bit.ly API.
+Console-Bitly:
+	A thin wrapper for the bit.ly API.
 		
-### Methods ###
-		URL Shorten:
-		ConsoleBitly.ConsoleBitly.shorten("YOUR_LONG_URL")
+Quick Install:
+	sudo pip install git+git://github.com/swaroopsm/Console-Bitly.git
 		
-		URL Expand:
-		ConsoleBitly.ConsoleBitly.expand("YOUR_SHORT_BITLY_URL")
+Usage:
+	from ConsoleBitly import ConsoleBitly
+	bitly_username="YOUR_BITLY_USERNAME"
+	bitly_apikey="YOUR_BITLY_API_KEY"
+	bitly=ConsoleBitly(bitly_username,bitly_apikey)
 		
-		URL Information:
-		ConsoleBitly.ConsoleBitly.info("YOUR_SHORT_BITLY_URL")
+	#### API METHODS ####
+		
+	#### URL Shorten ####
+	bitly.shorten("http://google.com")
+		
+	#### URL Expand ####
+	bitly.expand("http://bit.ly/VaYjPq")
+		
+	#### URL Information ####
+	bitly.info("http://bit.ly/VaYjPq")
