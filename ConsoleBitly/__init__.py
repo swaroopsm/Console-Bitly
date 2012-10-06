@@ -14,9 +14,10 @@ class ConsoleBitly:
 			print "Please wait... \n"
 			response=urllib2.urlopen(url)
 			a = json.loads(response.read())
-			print "\nShortened URL is: \033[1;36m"+a['data']['url']+"\033[1;m\n"
+			short_url=a['data']['url']
+			return {"success": True, "value": short_url}
 		except:
-			print "\033[1;31mThe provided url may be invalid. Prefix URL with http OR https...\033[1;m\n"
+			return {"success": False}
 	
 	def expand(self,req):
 		try:
