@@ -36,11 +36,11 @@ class ConsoleBitly:
 			a = json.loads(response.read())
 			title=str(a['data']['info'][0]['title'])
 			if title=='None':
-				print "\nExpanded URL is: \033[1;36m There exists 'NO TITLE' for this URL.\033[1;m\n"
+				return {"success": True, "value": "Untitled"}
 			else:
-				print "\nExpanded URL is: \033[1;36m"+title+"\033[1;m\n"
+				return {"success": True, "value": title}
 		except:
-			print "Invalid bitly shortened URL"
+			return {"success": False}
 			
 	def lookup(self,req):
 		try:
