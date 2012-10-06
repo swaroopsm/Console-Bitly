@@ -13,13 +13,17 @@
 		#### API METHODS ####
 		
 		#### URL Shorten ####
-		bitly.shorten("http://google.com")
+		if bitly.shorten("http://google.com"):
+			bitly['value']
 		
 		#### URL Expand ####
-		bitly.expand("http://bit.ly/VaYjPq")
+		if bitly.expand("http://bit.ly/VaYjPq"):
+			bitly['value']
 		
 		#### URL Information ####
-		bitly.info("http://bit.ly/VaYjPq")
+		if bitly.info("http://bit.ly/VaYjPq"):
+			bitly['value']
 		
 		#### Lookup for a URL ####
-		bitly.info("http://google.com")
+		if bitly.info("http://google.com"):
+			bitly['value']
